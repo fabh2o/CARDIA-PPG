@@ -1,0 +1,12 @@
+[Unit]
+Description=Jupyter Notebook
+
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=jupyter lab --notebook-dir=/home/fabh2o/CARDIA-PPG
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

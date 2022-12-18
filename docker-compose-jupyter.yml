@@ -1,18 +1,20 @@
 services:
-  dsd-jupyter:
+  cardia-ppg-jupyter:
     image: jupyter/scipy-notebook
     container_name: cardia-ppg-jupyter
     restart: always
     environment:
-      NOTEBOOK_ARGS: "--collaborative --script --NotebookApp.password='argon2:$$argon2id$$v=19$$m=10240,t=10,p=8$$3uXz5Urb7TmLDsQvL1vHXQ$$Q6pTUPJ4FUVNtv0pxBebfoFSEqpq/NlzZMB9KYwTq/Q'"
+      NOTEBOOK_ARGS: "--collaborative --script --ServerApp.password=argon2:$$argon2id$$v=19$$m=10240,t=10,p=8$$3uXz5Urb7TmLDsQvL1vHXQ$$Q6pTUPJ4FUVNtv0pxBebfoFSEqpq/NlzZMB9KYwTq/Q"
       RESTARTABLE: yes
       TZ: Europe/Rome
     labels:
       - "com.centurylinklabs.watchtower.enable=false"
     volumes:
-      - ${PATH_TO_GIT_REPO}/:/home/jovyan/work
+      - ../:/home/jovyan/work
     networks:
       - default
+    ports:
+      - 127.0.0.1:8888:8888
 
 networks:
   default:
