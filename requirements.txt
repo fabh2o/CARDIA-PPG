@@ -1,4 +1,5 @@
 ipympl
 matplotlib
 numpy
+pandas
 scipy
