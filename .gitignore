@@ -1,1 +1,5 @@
 .ipynb_checkpoints/
+nb-clean/
+Data/Measurements/measurements.xlsx
+PPGPeaks.svg
+PulsePlot.svg
