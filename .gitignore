@@ -1,4 +1,5 @@
 .ipynb_checkpoints/
+__pycache__/
 nb-clean/
 Data/Measurements/measurements.xlsx
 PPGPeaks.svg

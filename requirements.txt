@@ -1,5 +1,6 @@
-ipympl
-matplotlib
-numpy
-pandas
-scipy
+alive-progress==2.4.1
+ipympl==0.9.2
+matplotlib==3.6.2
+numpy==1.23.4
+pandas==1.5.1
+scipy==1.9.3
